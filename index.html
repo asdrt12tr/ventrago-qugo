@@ -1,405 +1,886 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <title>Инструкция и Инструктаж: Чарджер Юрент</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Регистрация в Qugo — инструкция для исполнителей</title>
+
+  <meta
+    name="description"
+    content="Пошаговая инструкция по регистрации исполнителей на платформе Qugo"
+  >
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+    * {
+      box-sizing: border-box;
       margin: 0;
-      padding: 20px;
-      background-color: #f5f5f5;
-      color: #333;
+      padding: 0;
     }
-    main {
-      max-width: 900px;
-      margin: auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    html {
+      scroll-behavior: smooth;
     }
-    h1 {
-      font-size: 26px;
-      color: #c40024;
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      background: #f5f7fb;
+      color: #171923;
+      line-height: 1.6;
     }
-    h2 {
-      margin-top: 1.5em;
-      color: #2a4d8f;
-    }
-    h3 {
-      color: #c40024;
-    }
-    ul, ol {
-      margin-left: 20px;
-    }
-    strong {
-      font-weight: bold;
-    }
-    p {
-      margin: 0.5em 0;
-    }
-    section {
-      margin-bottom: 30px;
-    }
-    details {
-      margin: 10px 0;
-      background-color: #eef2fa;
-      padding: 10px 15px;
-      border-radius: 5px;
-    }
-    summary {
-      font-weight: bold;
-      cursor: pointer;
-    }
+
     a {
-      color: #c40024;
+      color: inherit;
       text-decoration: none;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .container {
+      width: min(1100px, calc(100% - 32px));
+      margin: 0 auto;
     }
-    hr {
-      margin: 40px 0;
-      border: 1px solid #ddd;
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      background: linear-gradient(135deg, #ff3158, #ff1744);
+      color: white;
+      padding: 70px 0 80px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 58px);
+      line-height: 1.08;
+      margin-bottom: 22px;
+      letter-spacing: -1.5px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: clamp(17px, 2.5vw, 21px);
+      opacity: 0.95;
+    }
+
+    .hero-button {
+      display: inline-block;
+      margin-top: 30px;
+      background: white;
+      color: #ff1744;
+      padding: 16px 28px;
+      border-radius: 14px;
+      font-weight: 800;
+      font-size: 17px;
+      transition: 0.2s;
+    }
+
+    .hero-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+    }
+
+    /* =========================
+       IMPORTANT
+    ========================= */
+
+    .important {
+      margin: -35px auto 45px;
+      position: relative;
+      background: #fff;
+      border: 3px solid #ff3158;
+      border-radius: 22px;
+      padding: 30px;
+      box-shadow: 0 15px 45px rgba(0,0,0,0.08);
+    }
+
+    .important h2 {
+      color: #ff1744;
+      margin-bottom: 12px;
+      font-size: 25px;
+    }
+
+    .important strong {
+      color: #ff1744;
+    }
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    section {
+      padding: 35px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(28px, 4vw, 40px);
+      margin-bottom: 35px;
+      letter-spacing: -0.5px;
+    }
+
+    /* =========================
+       APP BUTTONS
+    ========================= */
+
+    .apps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .app-card {
+      background: white;
+      border-radius: 20px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+      border: 1px solid #e8eaf0;
+      transition: 0.2s;
+    }
+
+    .app-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+
+    .app-icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .app-card h3 {
+      margin-bottom: 7px;
+      font-size: 20px;
+    }
+
+    .app-card p {
+      color: #6b7280;
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      width: 100%;
+      background: #171923;
+      color: white;
+      padding: 13px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      opacity: 0.85;
+    }
+
+    .browser-card {
+      margin-top: 22px;
+      background: #171923;
+      color: white;
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .browser-card h3 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .browser-card p {
+      opacity: 0.75;
+      margin-bottom: 20px;
+    }
+
+    .browser-button {
+      display: inline-block;
+      background: #ff3158;
+      color: white;
+      padding: 15px 28px;
+      border-radius: 12px;
+      font-weight: 800;
+    }
+
+    /* =========================
+       STEPS
+    ========================= */
+
+    .steps {
+      display: grid;
+      gap: 20px;
+    }
+
+    .step {
+      background: white;
+      border-radius: 20px;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 60px 1fr;
+      gap: 20px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+      border: 1px solid #e8eaf0;
+    }
+
+    .step-number {
+      width: 55px;
+      height: 55px;
+      background: #ff3158;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    .step h3 {
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .step ul,
+    .step ol {
+      padding-left: 22px;
+    }
+
+    .step li {
+      margin-bottom: 7px;
+    }
+
+    /* =========================
+       WARNING
+    ========================= */
+
+    .warning {
+      background: #fff3f5;
+      border: 2px solid #ff3158;
+      border-radius: 18px;
+      padding: 24px;
+      margin-top: 20px;
+    }
+
+    .warning-title {
+      font-size: 20px;
+      font-weight: 900;
+      color: #d91039;
+      margin-bottom: 8px;
+    }
+
+    /* =========================
+       CODE / FLOW
+    ========================= */
+
+    .flow {
+      background: #171923;
+      color: #fff;
+      border-radius: 20px;
+      padding: 28px;
+      overflow-x: auto;
+    }
+
+    .flow pre {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 16px;
+      line-height: 1.8;
+      white-space: pre-wrap;
+    }
+
+    .highlight {
+      color: #ff5d7a;
+      font-weight: 800;
+    }
+
+    /* =========================
+       CHECKLIST
+    ========================= */
+
+    .checklist {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+    }
+
+    .checklist label {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+    }
+
+    .checklist label:last-child {
+      border-bottom: none;
+    }
+
+    .checklist input {
+      width: 20px;
+      height: 20px;
+      accent-color: #ff3158;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    /* =========================
+       FINAL CTA
+    ========================= */
+
+    .final-cta {
+      background: linear-gradient(135deg, #171923, #272936);
+      color: white;
+      border-radius: 25px;
+      padding: 45px 30px;
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(28px, 5vw, 42px);
+      margin-bottom: 15px;
+    }
+
+    .final-cta p {
+      max-width: 700px;
+      margin: 0 auto 25px;
+      color: #d5d7df;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      text-align: center;
+      color: #737784;
+      padding: 45px 0;
+      font-size: 14px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 800px) {
+      .apps {
+        grid-template-columns: 1fr;
+      }
+
+      .step {
+        grid-template-columns: 1fr;
+      }
+
+      .step-number {
+        width: 48px;
+        height: 48px;
+        font-size: 19px;
+      }
+
+      .important {
+        padding: 23px;
+      }
+
+      .hero {
+        padding: 55px 0 65px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <main>
-    <h1>📘 Инструктаж чарджера Ventra</h1>
 
-    <section>
-      <h2>📌 Общая инструкция (со скриншотами)</h2>
-      <p>Перед началом работы ознакомьтесь с гайдом:</p>
-      <p><strong><a href="https://disk.yandex.ru/i/j9VVIZO4MaOw5Q" target="_blank">Скачать гайд по замене АКБ</a></strong></p>
-    </section>
+  <!-- =========================
+       HERO
+  ========================= -->
 
-    <section>
-      <h2>🔐 Материальная ответственность</h2>
-      <ul>
-        <li>Вы отвечаете за полученные аккумуляторы</li>
-        <li>Повреждение — возможные удержания</li>
-        <li>Не вскрывайте деку механически</li>
-        <li>Избегайте падений и влаги</li>
-        <li>Работайте только через ST Service</li>
-      </ul>
-    </section>
+  <header class="hero">
 
-    <section>
-      <h2>📢 Система корректировок (вычеты из оплаты)</h2>
+    <div class="container">
+
+      <div class="hero-badge">
+        🚨 ВАЖНАЯ ИНФОРМАЦИЯ ДЛЯ ИСПОЛНИТЕЛЕЙ
+      </div>
+
+      <h1>
+        Переходим на Qugo
+      </h1>
+
       <p>
-    В связи с многочисленными нарушениями запускаем <strong>систему корректировок</strong> в тестовом режиме.<br>
-    Если вы работаете строго по инструкции — для вас ничего не изменится.
+        Для получения ближайшей выплаты за последние две недели
+        необходимо зарегистрироваться на платформе Qugo.
       </p>
 
-      <h3>Отмена слота( в телеграм)</h3>
-      <p>Если вы <strong>не отменили забронированный слот до 10:00 текущего рабочего дня</strong>, применяется корректировка:</p>
-      <ul>
-        <li>1 нарушение — <strong>300 ₽</strong></li>
-        <li>2 нарушения — <strong>500 ₽</strong></li>
-        <li>3 нарушения — <strong>1000 ₽</strong></li>
-      </ul>
+      <a href="#registration" class="hero-button">
+        Начать регистрацию →
+      </a>
 
-      <h3>Отчёт о проделанной работе( в телеграм)</h3>
-      <p>Если вы <strong>не отправили отчёт до конца текущего рабочего дня</strong>:</p>
-      <ul>
-        <li>1 нарушение — <strong>100 ₽</strong></li>
-        <li>2 нарушения — <strong>200 ₽</strong></li>
-        <li>3 нарушения — <strong>300 ₽</strong></li>
-      </ul>
-    
-      <h3>ФРОД</h3>
-      <ul>
-        <li>Любое использование самоката в личных целях или обман при выполнении заданий — это <strong>фрод</strong>.</li>
-        <li><strong>За фрод:</strong> блокировка аккаунта без возможности восстановления и отмена оплаты за все слоты.</li>
-        <li>Сервис отслеживает каждое перемещение самоката — обман выявляется моментально.</li>
-      </ul>
+    </div>
 
-      <h3>⚠ Запрещено использовать самокаты в личных целях, передавать самокат и доступы в систему!</h3>
-      <p>Самокат предназначен <strong>только</strong> для зарядки и возврата на точку. Личные поездки <strong>недопустимы</strong>.</p>
+  </header>
 
-      <p><strong>✅ Работайте честно и по правилам — и ваши выплаты будут стабильными, а доступ к миссиям останется открытым.</strong></p>
-    </section> 
 
-    <section>
-      <h2>🔧 Инструктаж по замене АКБ</h2>
-      <ul>
-        <li>Откройте задачу → нажмите «Заменить АКБ»</li>
-        <li>Дека откроется → замените аккумулятор</li>
-        <li>Закройте деку, проверьте задачу</li>
-        <li><strong>Время:</strong> 20–30 секунд</li>
-      </ul>
-    </section>
+  <main class="container">
 
-    <section>
-      <h2>📍 Использование задачника</h2>
-      <ul>
-        <li>ST Service → «Начать слот» → «Чарджер»</li>
-        <li>На карте — задачи</li>
-        <li>Открывайте по пину, QR или номеру ТС</li>
-        <li>Выполняйте задачу и проверяйте результат</li>
-      </ul>
-    </section>
+    <!-- =========================
+         IMPORTANT
+    ========================= -->
 
-    <section>
-      <h2>⚠️ Безопасность</h2>
-      <ul>
-        <li>Крепите органайзер, двигайтесь на самокате</li>
-        <li>Не вскрывайте деку вручную</li>
-        <li>Избегайте влаги и перегрева</li>
-        <li>Работайте в заметной одежде</li>
-      </ul>
-    </section>
-    <hr>
-    <h1>🔧 Инструкция по работе: Внешний чарджер Юрент</h1>
+    <div class="important">
 
-    <section>
-      <h2>1. Общая информация</h2>
-      <ul>
-        <li><strong>Вакансия:</strong> Внешний чарджер</li>
-        <li><strong>Задача:</strong> Замена аккумуляторов на электросамокатах Юрент</li>
-        <li><strong>Основной инструмент:</strong> Приложение ST Service</li>
-        <li><strong>⚠️Мотивация:</strong> 60 ₽/час + 30 ₽ за каждый обслуженный самокат⚠️</li>
-        <li><strong>Требования:</strong> Смартфон на Android версии 10+</li>
-      </ul>
-    </section>
+      <h2>🔴 ВАЖНО!</h2>
 
-    <section>
-      <h2>2. Бронирование слота (график до 21ч, ночных смен нет)</h2>
-      <ol>
-        <li>Открой приложение ST Service</li>
-        <li>Нажми «Начать слот»</li>
-        <li>Выбери одну локацию (на которую откликался):</li>
-        <ul>
-          <li>Нажми «Выделить» рядом с нужной локацией</li>
-          <li>Нажми «Далее», затем «Применить локации»</li>
-        </ul>
-        <li>Выбери длительность слота: 4, 6, 8 или 12 часов. с 9-21ч</li>
-        <li>Подтверди выбор кнопкой «Начать слот»</li>
-      </ol>
-
-      <section>
-        <h3>🔑 Получение доступа и согласование смен</h3>
-        <p>Перед первым выходом на слот необходимо написать в Telegram-группу (<a href="https://t.me/+ONqt6fHG8ZIyNDcy" target="_blank">https://t.me/+ONqt6fHG8ZIyNDcy</a>):</p>
-        <ol>
-          <li>Фамилия, имя</li>
-          <li>Зарядная станция, куда планируете выйти</li>
-          <li>Первая дата выхода</li>
-        </ol>
-        <p>Это нужно для предоставления первичного доступа в приложение ST Service.</p>
-        <p>После получения доступа, каждую смену согласовывайте в этой же группе. Только после согласования вы сможете забронировать слот в ST Service.</p>
-      </section>
-
-      <h2>📢 Важное правило перед выходом на слот</h2>
-      <p>За 2 дня до выхода в эту группу (<a href="https://t.me/+ONqt6fHG8ZIyNDcy" target="_blank">https://t.me/+ONqt6fHG8ZIyNDcy</a>) обязательно пишите:</p>
-      <ol>
-        <li>Фамилия, имя</li>
-        <li>Зарядная станция, куда планируете выйти</li>
-        <li>Дата</li>
-      </ol>
-      <p>📍 Пример:<br />
-        Сидоров Иван<br />
-        Проспект Вернадского (зарядная станция)<br />
-        30.07
+      <p>
+        Мы переходим с платформы <strong>Ventrago на Qugo</strong>.
       </p>
-      <p>❌ Без смс — аккумуляторы не выдадут, даже если слот забронирован.</p>
-      <p>💬 Сначала пишете в группу,<br />
-        📲 потом бронируете слот на тот день, когда написали (ВАЖНО: не ранее чем за 2 дня до слота),<br />
-        🚴‍♂️ и только после этого — выходите.</p>
-    </section>
+
+      <p>
+        Чтобы получить ближайшую выплату за последние две недели,
+        необходимо зарегистрироваться в Qugo и завершить подключение.
+      </p>
+
+      <p>
+        ⏱️ Регистрация занимает примерно <strong>10 минут</strong>.
+      </p>
+
+      <p>
+        📱 Можно зарегистрироваться через приложение
+        <strong>или через браузер</strong>.
+      </p>
+
+    </div>
+
+
+    <!-- =========================
+         APPS
+    ========================= -->
 
     <section>
-      <h2>3. Органайзер и аккумуляторы</h2>
-      <ul>
-        <li>Органайзер на 8 (реже — 12) аккумуляторов</li>
-        <li>Крепится на самокат, на котором вы передвигаетесь</li>
-        <li>Передвижение — в основном стоя</li>
-      </ul>
+
+      <h2 class="section-title">
+        📲 Где зарегистрироваться?
+      </h2>
+
+      <div class="apps">
+
+        <div class="app-card">
+
+          <div class="app-icon">🍎</div>
+
+          <h3>iPhone / iPad</h3>
+
+          <p>
+            Скачайте приложение Qugo из App Store
+          </p>
+
+          <a
+            class="button"
+            href="https://apps.apple.com/ru/app/qugo-%D0%BA%D1%8C%D1%8E%D0%B3%D0%BE/id1560958963"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            App Store
+          </a>
+
+        </div>
+
+
+        <div class="app-card">
+
+          <div class="app-icon">🤖</div>
+
+          <h3>Android</h3>
+
+          <p>
+            Скачайте приложение Qugo из RuStore
+          </p>
+
+          <a
+            class="button"
+            href="https://www.rustore.ru/catalog/app/ru.qugo.mobile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            RuStore
+          </a>
+
+        </div>
+
+
+        <div class="app-card">
+
+          <div class="app-icon">▶️</div>
+
+          <h3>Android</h3>
+
+          <p>
+            Скачайте приложение Qugo из Google Play
+          </p>
+
+          <a
+            class="button"
+            href="https://play.google.com/store/apps/details?id=ru.qugo.mobile&hl=ru"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Play
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="browser-card">
+
+        <h3>💻 Не хотите устанавливать приложение?</h3>
+
+        <p>
+          Это не проблема. Можно зарегистрироваться прямо через браузер.
+        </p>
+
+        <a
+          class="browser-button"
+          href="https://qugo.ru/samozanyatym"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🔴 ЗАРЕГИСТРИРОВАТЬСЯ В QUGO
+        </a>
+
+      </div>
+
     </section>
 
-    <section>
-      <h2>4. Поиск самокатов</h2>
-      <h2>🔋 Как увидеть больше самокатов при старте слота</h2>
-       <ol>
-        <li>При выборе слота нажмите <strong>«Техзоны»</strong></li>
-        <li>В строке поиска введите <strong>Чарджер</strong></li>
-        <li>✅ Отметьте <strong>все найденные техзоны</strong></li>
-        <li>Нажмите <strong>«Применить»</strong></li>
-        <li>Выберите длительность слота и нажмите <strong>«Начать слот»</strong></li>
-      </ol>
-      <p>📍 Это покажет <strong>больше самокатов на карте</strong>, доступных для замены АКБ.</p>
-      <ul>
-        <li>Включите фильтр на низкий заряд (не нулевой).</li>
-        <li>замена аккумуляторов оплачивается только в рамках задач типа «низкий заряд».</li>
-        <li>Если самокат не найден — просто пропустите его, на самый крайний случай отметьте в приложении как «Не найден»</li>
-      </ul>
+
+    <!-- =========================
+         REGISTRATION
+    ========================= -->
+
+    <section id="registration">
+
+      <h2 class="section-title">
+        📝 Пошаговая регистрация
+      </h2>
+
+
+      <div class="steps">
+
+
+        <!-- STEP 1 -->
+
+        <div class="step">
+
+          <div class="step-number">1</div>
+
+          <div>
+
+            <h3>Зарегистрируйтесь в Qugo</h3>
+
+            <ol>
+              <li>Откройте приложение Qugo или сайт.</li>
+              <li>Нажмите «Начать регистрацию» / «Зарегистрироваться».</li>
+              <li>Выберите налоговый статус <strong>«Самозанятый»</strong>.</li>
+              <li>Укажите номер телефона.</li>
+              <li>Введите код подтверждения из SMS.</li>
+              <li>Заполните данные профиля.</li>
+              <li>Укажите необходимые данные для получения выплат.</li>
+              <li>Завершите регистрацию.</li>
+            </ol>
+
+          </div>
+
+        </div>
+
+
+        <!-- STEP 2 -->
+
+        <div class="step">
+
+          <div class="step-number">2</div>
+
+          <div>
+
+            <h3>⚠️ Подключите Qugo в «Моём налоге»</h3>
+
+            <p>
+              После регистрации необходимо подтвердить подключение
+              Qugo в приложении <strong>«Мой налог»</strong>.
+            </p>
+
+            <br>
+
+            <ol>
+              <li>Откройте приложение «Мой налог».</li>
+              <li>Найдите запрос на подключение Qugo.</li>
+              <li>Подтвердите подключение Qugo.</li>
+            </ol>
+
+            <div class="warning">
+
+              <div class="warning-title">
+                🔴 ЭТОТ ШАГ ОБЯЗАТЕЛЕН
+              </div>
+
+              <p>
+                Пожалуйста, не пропускайте подключение Qugo в
+                «Моём налоге».
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- STEP 3 -->
+
+        <div class="step">
+
+          <div class="step-number">3</div>
+
+          <div>
+
+            <h3>🏦 Проверьте реквизиты</h3>
+
+            <p>
+              Проверьте правильность данных в профиле Qugo:
+            </p>
+
+            <ul>
+              <li>ФИО;</li>
+              <li>номер телефона;</li>
+              <li>статус самозанятого;</li>
+              <li>банковские реквизиты;</li>
+              <li>остальные данные профиля.</li>
+            </ul>
+
+            <div class="warning">
+
+              <div class="warning-title">
+                ⚠️ Обратите особое внимание на реквизиты
+              </div>
+
+              <p>
+                Проверьте банковские реквизиты,
+                чтобы выплата смогла поступить корректно.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- STEP 4 -->
+
+        <div class="step">
+
+          <div class="step-number">4</div>
+
+          <div>
+
+            <h3>📄 Проверьте личный кабинет</h3>
+
+            <ul>
+              <li>Проверьте наличие задания / документов.</li>
+              <li>При необходимости подпишите документы.</li>
+              <li>Следуйте дальнейшим инструкциям в Qugo.</li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
 
+
+    <!-- =========================
+         FLOW
+    ========================= -->
+
     <section>
-      <h2>5. Построение маршрута</h2>
-      <ol>
-        <li>Бронируете самокат</li>
-        <li>Нажимаете «Маршрут» → Яндекс.Карты</li>
-        <li>Используйте режим «Самокат» или альтернативные карты</li>
-      </ol>
+
+      <h2 class="section-title">
+        🔥 Весь процесс в 8 шагов
+      </h2>
+
+      <div class="flow">
+
+<pre>
+1️⃣ Зарегистрироваться в Qugo
+        ↓
+2️⃣ Выбрать «Самозанятый»
+        ↓
+3️⃣ Подтвердить номер телефона
+        ↓
+4️⃣ Заполнить профиль
+        ↓
+<span class="highlight">5️⃣ Подключить Qugo в «Мой налог»</span>
+        ↓
+6️⃣ Проверить банковские реквизиты
+        ↓
+7️⃣ Проверить документы в Qugo
+        ↓
+<span class="highlight">8️⃣ Готово — можно получать выплату ✅</span>
+</pre>
+
+      </div>
+
     </section>
 
+
+    <!-- =========================
+         CHECKLIST
+    ========================= -->
+
     <section>
-      <h2>6. Перемещение</h2>
-      <ul>
-        <li>Берите ближайший самокат через ST Service (бесплатно)</li>
-        <li>Сканируйте QR-код</li>
-        <li>Нажмите «Переместиться»</li>
-      </ul>
+
+      <h2 class="section-title">
+        ✅ Проверьте себя
+      </h2>
+
+      <div class="checklist">
+
+        <label>
+          <input type="checkbox">
+          <span>Я зарегистрировался / зарегистрировалась в Qugo.</span>
+        </label>
+
+        <label>
+          <input type="checkbox">
+          <span>Я выбрал(а) статус «Самозанятый».</span>
+        </label>
+
+        <label>
+          <input type="checkbox">
+          <span>Я подтвердил(а) номер телефона.</span>
+        </label>
+
+        <label>
+          <input type="checkbox">
+          <span>Я заполнил(а) профиль.</span>
+        </label>
+
+        <label>
+          <input type="checkbox">
+          <span><strong>Я подключил(а) Qugo в «Мой налог».</strong></span>
+        </label>
+
+        <label>
+          <input type="checkbox">
+          <span>Я проверил(а) банковские реквизиты.</span>
+        </label>
+
+        <label>
+          <input type="checkbox">
+          <span>Я проверил(а) документы и задания в Qugo.</span>
+        </label>
+
+      </div>
+
     </section>
 
-<section>
 
-  
-  <h2>7. Замена аккумулятора</h2>
-
-  <div style="background-color: #fff3cd; border: 1px solid #ffeeba; padding: 10px 15px; border-radius: 6px; margin-bottom: 15px; font-weight: bold; color: #856404;">
-    ⚠️ Не используйте кнопки в задачнике:<br>
-    • Не могу найти транспорт<br>
-    • Требует ремонта<br>
-    <span style="text-decoration: underline;">Просто переходите к следующему самокату без нажатия этих кнопок‼️</span>
-  </div>
-  <ol>
-    <li>Выберите задачу в приложении</li>
-    <li>Нажмите «Замена аккумулятора»</li>
-    <li>Откроется дека, отсоедините кабель</li>
-    <li>Замените АКБ, подключите, закройте ногой</li>
-  </ol>
-  <p><strong>⏱ Время замены:</strong> 20–30 секунд</p>
-</section>
+    <!-- =========================
+         FINAL CTA
+    ========================= -->
 
     <section>
-      <h2>8. Отчётность</h2>
-      <ul>
-        <li>Вся отчетность ведется в Telegram-группе (<a href="https://t.me/+ONqt6fHG8ZIyNDcy" target="_blank">https://t.me/+ONqt6fHG8ZIyNDcy</a>)</li>
-        <li>В группе публикуются инструкции и ответы по отчетности</li>
-        <li>По всем вопросам и отчетам обращайтесь именно туда</li>
-      </ul>
+
+      <div class="final-cta">
+
+        <h2>
+          🚨 Не забудьте зарегистрироваться!
+        </h2>
+
+        <p>
+          Для ближайшей выплаты за последние две недели
+          необходимо пройти регистрацию в Qugo.
+        </p>
+
+        <a
+          class="browser-button"
+          href="https://qugo.ru/samozanyatym"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🔴 ПЕРЕЙТИ К РЕГИСТРАЦИИ
+        </a>
+
+      </div>
+
     </section>
-
-    <section>
-  <h2>❓ FAQ — Часто задаваемые вопросы по замене АКБ и работе с приложением</h2>
-
-  <details>
-    <summary>Что такое замена АКБ и какие бывают виды?</summary>
-    <p>Замена АКБ — это замена севшей аккумуляторной батареи в транспортном средстве. Бывают две категории замены:
-    <ul>
-      <li><strong>Не по задачам</strong> — в сервисном центре, зарядном центре и др., без создания задачи в Задачнике;</li>
-      <li><strong>По задачам</strong> — через Задачник, важна для учёта и оплаты работы чарджера.</li>
-    </ul>
-    </p>
-  </details>
-
-  <details>
-    <summary>Как происходит замена АКБ по задачам в приложении?</summary>
-    <p>Чарджер входит в ST Service, начинает смену с ролью чарджера, на карте задачника выбирает пин задачи, нажимает "Заменить АКБ", дека открывается, выполняет замену, после чего задача засчитывается.</p>
-  </details>
-
-  <details>
-    <summary>Какие способы есть для замены АКБ?</summary>
-    <p>Можно заменить АКБ:
-    <ul>
-      <li>Через пин задачи на карте;</li>
-      <li>Через сканер QR-кода ТС;</li>
-      <li>Через сканер с вводом номера ТС вручную.</li>
-    </ul>
-    </p>
-  </details>
-
-  <details>
-    <summary>Что такое SLA и какие приоритеты задач бывают?</summary>
-    <p>SLA — время на выполнение задачи замены АКБ. Приоритеты и время:
-    <ul>
-      <li><strong>Critical (Разряжен)</strong> — 6 часов;</li>
-      <li><strong>Burning (Низкий заряд)</strong> — 6 часов;</li>
-      <li><strong>HighPriority (Садится)</strong> — 12 часов;</li>
-      <li><strong>Normal (Доступен)</strong> — 24 часа.</li>
-    </ul>
-    Чарджеры Ventra работают только с задачами приоритета «Низкий заряд».</p>
-  </details>
-
-  <details>
-    <summary>Что делать, если самокат находится в перемещении, ремонте или аренде?</summary>
-    <p>Нужно вернуть транспортное средство в доступ — тогда задача появится в Задачнике, и можно будет заменить АКБ.</p>
-  </details>
-
-  <details>
-    <summary>Можно ли открывать деку вручную без нажатия кнопки в приложении?</summary>
-    <p>Нет. Такие замены не засчитываются, а механическое вскрытие деки запрещено.</p>
-  </details>
-
-  <details>
-    <summary>Как узнать количество выполненных замен и задач на оплату?</summary>
-    <p>В разделе активной смены отображается число выполненных задач с приоритетами и количеством замен. Оплачиваются только задачи, созданные через Задачник.</p>
-  </details>
-
-  <details>
-    <summary>Почему некоторые самокаты не показываются в Задачнике?</summary>
-    <p>Не всем самокатам требуется замена АКБ. Самокат может быть в перемещении, ремонте, зарядке и др. — нужно вернуть его в доступ, чтобы появилась задача.</p>
-  </details>
-
-  <details>
-    <summary>Как найти самокат в Задачнике по номеру?</summary>
-    <p>В сканере переключитесь на ввод номера (кнопка "123") и введите номер транспортного средства.</p>
-  </details>
-
-  <details>
-    <summary>Что делать, если в зоне "летает" геолокация самокатов?</summary>
-    <p>Используйте сканер для поиска самоката и замены АКБ. Система автоматически создаст задачи на замену.</p>
-  </details>
-
-  <details>
-    <summary>Можно ли заменить АКБ у самоката с нулевым зарядом?</summary>
-    <p>Нет, такие самокаты требуют другого оборудования.</p>
-  </details>
-
-  <details>
-    <summary>Можно ли взять самокат просто для перемещения между точками?</summary>
-    <p>Да, любой доступный самокат в приложении ST Service можно использовать для передвижения.</p>
-  </details>
-
-  <details>
-    <summary>Что делать, если не нахожу самокат по пину на карте?</summary>
-    <p>Отметьте «Не найден» в приложении, и задача исчезнет с карты.</p>
-  </details>
-
-
-  <details>
-    <summary>Как узнать, сколько самокатов я обслужил?</summary>
-    <p>Информация отображается в приложении ST Service в разделе активной смены.</p>
-  </details>
-
-  <details>
-    <summary>Что делать при ЧП или технической проблеме?</summary>
-    <p>Немедленно сообщайте в техподдержку МТС Юрент, а также написать координатору (Светлана).</p>
-  </details>
-
-  <details>
-    <summary>Какое время занимает замена аккумулятора?</summary>
-    <p>Обычно 20–30 секунд.</p>
-  </details>
-
-  <details>
-    <summary>Что нужно сделать перед выходом на слот?</summary>
-    <p>За 2 дня до выхода обязательно напишите в телеграм группу фамилию, зарядную станцию и дату.</p>
-  </details>
-</section>   
 
   </main>
+
+
+  <footer>
+
+    <div class="container">
+
+      <p>
+        Инструкция для исполнителей
+      </p>
+
+      <p>
+        Платформа Qugo
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+    /*
+      Сохраняем отмеченные пункты чек-листа
+      даже после перезагрузки страницы.
+    */
+
+    const checkboxes = document.querySelectorAll(
+      '.checklist input[type="checkbox"]'
+    );
+
+    checkboxes.forEach((checkbox, index) => {
+
+      const saved = localStorage.getItem(
+        `qugo-check-${index}`
+      );
+
+      if (saved === "true") {
+        checkbox.checked = true;
+      }
+
+      checkbox.addEventListener("change", () => {
+
+        localStorage.setItem(
+          `qugo-check-${index}`,
+          checkbox.checked
+        );
+
+      });
+
+    });
+  </script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
